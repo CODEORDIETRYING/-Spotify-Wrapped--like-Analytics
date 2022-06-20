@@ -1,4 +1,5 @@
 All the company's user data is stored in an Entity Relationship Diagram (ERD)
+
 ![ERD Diagram](https://raw.githubusercontent.com/CODEORDIETRYING/Marketing-Analytics-Case-Study/main/Images/ERD%20-%20LetFlix.png)
 
 <details>
@@ -118,4 +119,58 @@ Ref: "film_actor"."actor_id" > "actor"."actor_id"
   
   ```
 </details>
+
+**Description of All Tables:**
+<details>
+ <summary>Table #1 - Rental</summary>
+This table holds information on film rentals at a customer level. Each record is a rental instance where a customer rents out a particular film. The rental_id column serves as a unique identifier for each record in the table which corresponds to an individual customer_id renting a specific item with an inventory_id. The last_update field is an internal database timestamp for when the data row was last inserted or updated. 
+
+From the ERD, we can observe that there is a linkage between the rental table and the inventory table via the inventory_id field.
+ 
+</details>
+  
+</details>
+
+<details>
+ <summary>Table #2 - Inventory</summary>
+The inventory table contains information about the specific items available in each LetFlix store. It should be noted that there can be multiple inventory items for a specific film at a unique store, meaning that a particular film can be available in multiple copies, but have different inventory IDs. For instance, Spider-Man Homecoming might have 5 copies at store #1 and an additional 3 copies in store #2 - each record in this Inventory dataset will have a separate inventory_id whilst the film_id will all be the same and the store_id changes according to the store number.
+
+From the ERD, we can observe that there is a linkage between the inventory table and the film table via the film_id column.
+ 
+</details>
+
+<details>
+ <summary>Table #3 - Film</summary>
+Whilst we can see each customer that rented a movie, the rental date, and inventory_id of the item, we know nothing about the title and category of the film itself. Information about all films in all store locations can be found in the film table. This dataset helps us uniquely identify films by title and description among other parameters. With the information provided in this table, we can identify the title of movies rented by LetFlix customers. 
+
+We will use the film_id column to help us join the film table unto the film_actor table so that we can identify which actors appeared in each film.
+ 
+</details>
+
+<details>
+ <summary>Table #4 - Film_Category</summary>
+This table shows us the relationship between a film_id and the corresponding category_id. As you already expect, a particular category_id can be associated with multiple film_id’s (There are multiple films in the comedy category and other categories as well).
+ 
+</details>
+
+<details>
+ <summary>Table #5 - Category</summary>
+This is a table showing unique category_id’s and the associated category_name.
+ 
+</details>
+
+<details>
+ <summary>Table #6 - Film_actor</summary>
+The film_Actor shows a relationship between actors and the films they star in based off related actor_id and film_id values. In the same way a film has multiple actors, an actor can appear in multiple films, meaning we have a many-to-many relationship between both columns in the film_actor table.
+
+To get more information about an actor’s first and last name, we would need to join the film_actor table to the actor table on the actor_id column.
+ 
+</details>
+
+<details>
+ <summary>Table #7 - Actor</summary>
+This gives us information about all actors (id, first_name and last_name). The actor_id column is a unique key that identifies all actors. 
+ 
+</details>
+  
 
