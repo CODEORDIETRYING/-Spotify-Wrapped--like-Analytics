@@ -5,7 +5,7 @@ All the company's user data is stored in an Entity Relationship Diagram (ERD)
 <details>
   <summary>Here is the code for creating the ERD seen above</summary>
   
-  ```
+  ```sql
   
   Table "rental" {
   "rental_id" integer [not null]
