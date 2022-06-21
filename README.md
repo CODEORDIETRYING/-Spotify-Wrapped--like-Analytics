@@ -36,6 +36,7 @@ The marketing team has shared a draft template of the email campaign intended to
 ##  🛰 Data Exploration
 The data needed for analysis are stored in 7 different tables. To make the dataset easy to visualize and link all foreign keys to one another, each table and respective columns have been properly visualized in an entity-relationship diagram (ERD) using [dbdiagram.io.](https://dbdiagram.io)
 
+![](https://img.shields.io/badge/VIEW-DATA%20EXPLORATION%20FOLDER-blue)
 [**VIEW DATA EXPLORATION FOLDER**](https://github.com/CODEORDIETRYING/Marketing-Analytics-Case-Study/tree/main/Data%20Exploration)
 
 ---
