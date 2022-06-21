@@ -30,20 +30,19 @@ The marketing team has shared a draft template of the email campaign intended to
 
 ![Email Template](https://raw.githubusercontent.com/CODEORDIETRYING/Marketing-Analytics-Case-Study/main/Images/LetFlix%20DVD%20Rental%20Company%20Marketing%20Case%20Study.png)
 
-
+[**VIEW REQUIREMENTS FOLDER**](https://github.com/CODEORDIETRYING/Marketing-Analytics-Case-Study/tree/main/Requirements)
 
 ---
 ##  🛰 Data Exploration
 The data needed for analysis are stored in 7 different tables. To make the dataset easy to visualize and link all foreign keys to one another, each table and respective columns have been properly visualized in an entity-relationship diagram (ERD) using [dbdiagram.io.](https://dbdiagram.io)
 
-![](https://img.shields.io/badge/VIEW-DATA%20EXPLORATION%20FOLDER-blue)
 [**VIEW DATA EXPLORATION FOLDER**](https://github.com/CODEORDIETRYING/Marketing-Analytics-Case-Study/tree/main/Data%20Exploration)
 
 ---
 ## 5. 🔬 Reverse Engineering
 To determine what tables and columns we are going to be working with, we need to start from the end result (email template) and walk our way to the needed tools (in this case data fields) we are going to be working with. Our overall end result for this analysis is being able to populate the email template as shown by the marketing team, so we are going to be using that. 
 
-**VIEW RESERVE ENGINEERING FOLDER**
+[**VIEW REVERSE ENGINEERING FOLDER**](https://github.com/CODEORDIETRYING/Marketing-Analytics-Case-Study/tree/main/Reverse%20Engineering)
 
 --- 
 ## 6. 🔗 Table Joining
@@ -55,6 +54,8 @@ The rental table determines a lot in this analysis because it gives us informati
 - Step 2: Join the new table from step 1 to dvd_rental.film to get the film titles. The foreign key for the join is the film_id column
 - Step 3: Join the dvd_rental.film table to the dvd_rental.film_category table on the film_id column
 - Step 4: Finally join the previous table to the dvd_rental.category table on the category_id column serving as a foreign key
+
+[**VIEW TABLE JOINING FOLDER**](https://github.com/CODEORDIETRYING/Marketing-Analytics-Case-Study/tree/main/Table%20Joining)
 
 ---
 ## 7. 🔨 Problem Solving with SQL
@@ -93,13 +94,15 @@ SELECT * FROM complete_joint_dataset limit 5;
 | 222 | 450 | IDOLS SNATCHERS | 2005-05-24 23:05:21 | Children |
 </details>
 
+[**VIEW PROBLEM SOLVING WITH SQL FOLDER**](https://github.com/CODEORDIETRYING/Marketing-Analytics-Case-Study/tree/main/Problem%20Solving%20With%20SQL)
+
 ---
 ## 8. 💽 Solution
 To simplify things for the marketing team, I generated a single lookup table for them to consume. Each row/data entry in the lookup table is associated with a single customer.
 
 I made use of multiple CTEs to perform the transformation from long to wide. Also, I used the CONCAT function to concatenate strings and column inputs.
 
-**VIEW SOLUTION FOLDER**
+[**VIEW SOLUTION FOLDER**](https://github.com/CODEORDIETRYING/Marketing-Analytics-Case-Study/tree/main/Solution)
 
 
 
