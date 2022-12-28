@@ -1,4 +1,4 @@
-# Marketing Campaign Case Study (Using SQL) - Similar to Spotify Wrapped.
+# How To Do a Year In Review Using Raw User Data - Similar to Spotify Wrapped.
 >A marketing campaign case study that uses user data to increase email open rate and engagement for a ficticious dvd rental company called LetFlix (sounds original to me)! This case study showcases my understanding of SQL and is a part of the Serious SQL course by [Danny Ma](https://www.linkedin.com/in/datawithdanny/)
 
 ---
