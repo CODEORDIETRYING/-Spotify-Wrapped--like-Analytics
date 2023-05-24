@@ -16,18 +16,18 @@ In this project, I am extracting relevant data from a DVD rental company called 
 7. 🔨 Problem Solving with SQL
 8. 💽 Solution
 ---
-## 🎞 Introduction
+## 1. 🎞 Introduction
 As humans, we like to feel special and not get lost in the crowd, even if an experience is a general one. Every digital marketer and business lead/owner knows how important it is to send out pushnotifications and emails that are engaging and can get customers to take action. One tested way to engage customers is by sending personalized copies. Personalized customer emails based off user analytics are a great way for consumer-facing digital companies to connect with their audience and increase user engagement via mail. 
 
 In this case study, I am going to be making use of SQL to leverage customer data of a fictitious movie rental company in order to send out personalized emails that engage customers and make them feel special, let’s call this company “Letflix” - sounds very original right? 
 The operations in this case study can be applied elsewhere regardless of the industry and use case, but it is best suited for consumer-facing businesses. Special shout out to [Danny Ma](https://www.linkedin.com/in/datawithdanny/) for this [SQL Bootcamp](https://www.datawithdanny.com/) course. Hands down the best dollar I have ever spent learning data analytics with SQL. Let's head over to the case study problem!
 
 ---
-## 🎬 Problem
+## 2.🎬 Problem
 The marketing team at Letflix has decided to launch their first-ever personalized marketing campaign as a strategy to engage customers and recommend new movies to them. One of the challenges they face is getting access to the necessary data points needed to populate specific parts of the email campaign. Most of the companies user data is stored within multiple tables in a relational database. To this end, they have reached out to the data team with a draft of the email template to be sent out, in order to analyze the company’s database and come up with a single table that is much easier for them to use. 
 
 ---
-## 🚦 Requirements
+## 3.🚦 Requirements
 The marketing team has shared a draft template of the email campaign intended to be sent out to all customers. This serves as a guide for the data team. 
 
 ![Email Template](https://raw.githubusercontent.com/CODEORDIETRYING/Marketing-Analytics-Case-Study/main/Images/LetFlix%20DVD%20Rental%20Company%20Marketing%20Case%20Study.png)
@@ -35,7 +35,7 @@ The marketing team has shared a draft template of the email campaign intended to
 [**VIEW REQUIREMENTS FOLDER**](https://github.com/CODEORDIETRYING/Marketing-Analytics-Case-Study/tree/main/Requirements)
 
 ---
-##  🛰 Data Exploration
+## 4. 🛰 Data Exploration
 The data needed for analysis are stored in 7 different tables. To make the dataset easy to visualize and link all foreign keys to one another, each table and respective columns have been properly visualized in an entity-relationship diagram (ERD) using [dbdiagram.io.](https://dbdiagram.io)
 
 [**VIEW DATA EXPLORATION FOLDER**](https://github.com/CODEORDIETRYING/Marketing-Analytics-Case-Study/tree/main/Data%20Exploration)
