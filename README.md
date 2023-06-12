@@ -24,7 +24,7 @@ The operations in this case study can be applied elsewhere regardless of the ind
 
 ---
 ## 2.🎬 Problem
-The marketing team at Letflix has decided to launch their first-ever personalized marketing campaign as a strategy to engage customers and recommend new movies to them. One of the challenges they face is getting access to the necessary data points needed to populate specific parts of the email campaign. Most of the companies user data is stored within multiple tables in a relational database. To this end, they have reached out to the data team with a draft of the email template to be sent out, in order to analyze the company’s database and come up with a single table that is much easier for them to use. 
+The marketing team at Letflix has decided to launch their first-ever personalized marketing campaign as a strategy to engage customers and recommend new movies to them. One of the challenges they face is getting access to the necessary data points needed to populate specific parts of the email campaign. Most of the company's user data is stored within multiple tables in a relational database. To this end, they have reached out to the data team with a draft of the email template to be sent out, in order to analyze the company’s database and come up with a single table that is much easier for them to use. 
 
 ---
 ## 3.🚦 Requirements
