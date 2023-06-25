@@ -45,11 +45,10 @@ customers’ top 2 categories. It should be noted that we cannot recommend a fil
 
 <details>
 <summary>View Details</summary>
-In addition to the top 2 categories, their insights, and recommendations, marketing has also requested for each customer’s 
-top actor and recommended films starring that actor. As well as the count of films watched where the actor was a cast.
+In addition to the top 2 categories, their insights, and recommendations, marketing has also requested each customer’s top actor and recommended films starring that actor. As well as the count of films watched where the actor was cast.
 
-**Note:** In the case where there is a tie in top actors, the marketing team has concluded that we can order the actors in alphabetical order. 
-Also, we are not including a recommendation that has been previously watched or recommended in the top 2 categories. If the customer doesn’t have at least 1 film recommendation - they also need to be flagged with a separate actor exclusion flag.
+**Note:** In the case where there is a tie in top actors, the marketing team has concluded that we can order the actors in alphabetical order. Also, we are not including a recommendation that has been previously watched or recommended in the top 2 categories. If the customer doesn’t have at least 1 film recommendation - they also need to be flagged with a separate actor exclusion flag.
+
 
 ![Category Film Recommendations](https://github.com/CODEORDIETRYING/-Spotify-Wrapped--like-Analytics/blob/main/Images/Favourite%20actor%20and%20recommendation%20circled.PNG)
 </details>
