@@ -5,14 +5,14 @@ Let’s take another look at the base table.
   <summary>Base Table (complete_joint_dataset)</summary>
 
   ```sql
-  DROP TABLE IF EXISTS complete_joint_dataset;
+DROP TABLE IF EXISTS complete_joint_dataset;
 CREATE TEMP TABLE complete_joint_dataset AS
 SELECT
   rental.customer_id,
   inventory.film_id,
   film.title,
-  rental.rental_date,
-  category.name AS category_name
+  category.name AS category_name,
+  rental.rental_date
 FROM dvd_rentals.rental
 INNER JOIN dvd_rentals.inventory
   ON rental.inventory_id = inventory.inventory_id
@@ -21,7 +21,7 @@ INNER JOIN dvd_rentals.film
 INNER JOIN dvd_rentals.film_category
   ON film.film_id = film_category.film_id
 INNER JOIN dvd_rentals.category
-  ON film_category.category_id = category.category_id;
+  ON film_category.category_id = category.category_id
 
 SELECT * FROM complete_joint_dataset limit 5;
   ```
@@ -95,8 +95,8 @@ SELECT
   customer_id,
   category_name,
   COUNT(*) AS rental_count,  --aggregating on customer_id and category_name to find the count
-  MAX(rental_date) AS latest_rental_date --I included the maximum rental date to use as a criteria for choosing a top category in the case there is a tie.
-FROM complete_joint_dataset_with_rental_date
+  MAX(rental_date) AS latest_rental_date --I included the maximum rental date to use as a criteria for choosing a top category in case there is a tie.
+FROM complete_joint_dataset
 GROUP BY
   customer_id,
   category_name;
