@@ -1,4 +1,4 @@
-All the company's user data is stored in an Entity Relationship Diagram (ERD)
+All the company's user data can be visualized in an Entity Relationship Diagram (ERD)
 
 ![ERD Diagram](https://raw.githubusercontent.com/CODEORDIETRYING/Marketing-Analytics-Case-Study/main/Images/ERD%20-%20LetFlix.png)
 
