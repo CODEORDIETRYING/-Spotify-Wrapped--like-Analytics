@@ -325,8 +325,27 @@ FROM top_category_percentile AS base
 LEFT JOIN average_category_count AS average
   ON base.category_name = average.category_name;	
 
-```	
-	
+SELECT *
+FROM first_category_insights
+LIMIT 10; 	
+
+```
+**Result**
+| customer_id | category_name | rental_count | average_comparison | percentile |
+| --- | --- | --- | --- | --- |
+| 323 | Action | 7 | 5 | 1 |
+| 506 | Action | 7 | 5 | 1 |
+| 151 | Action | 6 | 4 | 1 |
+| 410 | Action | 6 | 4 | 1 |
+| 126 | Action | 6 | 4 | 1 |
+| 51 | Action | 6 | 4 | 1 |
+| 487 | Action | 6 | 4 | 1 |
+| 363 | Action | 6 | 4 | 1 |
+| 209 | Action | 6 | 4 | 1 |
+| 560 | Action | 6 | 4 | 1 |
+
+With this, we can compose the first category insight for customer 323 as: “You’ve watched ***7 Action*** films, that’s ***5*** more than the average and puts you in the top ***1%*** of ***Action*** gurus!”.
+ 
 ### Second Category Insight
 
 ```sql
@@ -344,19 +363,37 @@ SELECT
 FROM top_categories
 LEFT JOIN total_counts
   ON top_categories.customer_id = total_counts.customer_id
-WHERE category_rank = 2;	
+WHERE category_rank = 2;
+
+SELECT *
+FROM second_category_insights
+LIMIT 10;	
 
 ```		
-		
+Result
+| customer_id | category_name | rental_count | total_percentage |
+| --- | --- | --- | --- |
+| 184 | Drama | 3 | 13 |
+| 87 | Sci-Fi | 3 | 10 |
+| 477 | Travel | 3 | 14 |
+| 273 | New | 4 | 11 |
+| 550 | Drama | 4 | 13 |
+| 51 | Drama | 4 | 12 |
+| 394 | Documentary | 3 | 14 |
+| 272 | Documentary | 3 | 15 |
+| 70 | Music | 2 | 11 |
+| 190 | Classics | 3 | 11 |
+
+With this, we can compose the second category insight for customer 184 as: “You’ve watched _**3 Drama**_ films, making up _**13%**_ of your entire viewing history”.
 </details>
 
 ---
 
 <details>
 <summary>Requirement 4: Category Film Recommendations</summary>
-To find the category recommendations, I am going to rank films by the number of times they have been rented, and this involves generating a count of movies using film_id and title.
+To find the category recommendations, I ranked films by the number of times they have been rented, and this involves generating a count of movies using film_id and title.
 
-To find these movies, I generated a summarized film count table with the category included, then I created a previously watched films table for the top 2 categories to exclude for each customer (category_films_exclusions), and finally I performed an anti join to remove the category_films exclusion from the film_counts table and used a Rank_number windows function to find the actual category_recommendations.
+To find these movies, I generated a summarized film count table with the category included, then I created a previously watched films table for the top 2 categories to exclude for each customer (category_films_exclusions). Finally, I performed an anti-join to remove the category_films exclusion from the film_counts table and used a Rank_number windows function to find the actual category_recommendations.
 	
 
 ### Film Counts	
