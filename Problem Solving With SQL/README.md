@@ -217,7 +217,7 @@ LIMIT 2;
 | 1 | Comedy | 1 |
 
 
-### Joning It All Together		     
+### Joining It All Together		     
 In the code below, I generated calculated columns of the actual data points we need - percentile, average comparison, and category percentage.
 
 Right now we have generated four tables which I am going to join before I pick out just the top two categories for all customers. Since I needed to keep all of the rental_count records, I used the `category_rental_count` temp table as the starting base table.
